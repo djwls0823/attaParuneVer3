@@ -40,8 +40,7 @@ HTTPS 기반 도메인 환경에서 배포까지 진행했습니다.
 
 ### 🛠 관리자 기능
 - 회사 관리자 페이지에서 직원 및 포인트 관리 CRUD 기능 구현
-- 식당 관리자 페이지에서 음식점 이미지 등록 및 수정 기능 구현  
-  (이미지 업로드 → 서버 저장 → DB 연동 처리)
+- 식당 관리자 페이지에서 음식점 이미지 등록 및 수정 기능 구현
 
 ### 🔐 배포 및 보안
 - Let's Encrypt를 활용하여 SSL 인증서를 발급하고 HTTPS 환경 구축
@@ -50,14 +49,17 @@ HTTPS 기반 도메인 환경에서 배포까지 진행했습니다.
 ## 🖼 실행 화면
 
 ### 메인 화면
-![main](<img width="298" height="660" alt="image" src="https://github.com/user-attachments/assets/c38ca311-4fd8-4c98-b9bd-422af2295fd9" />
-)
+<img src="https://github.com/user-attachments/assets/5f8406f9-8c1c-4010-b578-b5b0ffe964c3" width="200"/>
 
 ### 주문 내역
-![order](이미지경로)
+<img src="https://github.com/user-attachments/assets/c78c6f53-f101-4a16-8bf3-5e5661e32e87" width="200"/>
+<img src="https://github.com/user-attachments/assets/4384a4f2-5ae7-4628-b86c-b9f71883a06e" width="200"/>
 
 ### 함께 결제
-![pay](이미지경로)
+<img src="https://github.com/user-attachments/assets/c16bd081-33e9-4cbc-a2f2-13a7c7197926" width="200"/>
+<img src="https://github.com/user-attachments/assets/b7f6a936-7f87-4501-9027-22d527d1ddac" width="200"/>
 
 ### 관리자 페이지
-![admin](이미지경로)
+<img src="https://github.com/user-attachments/assets/a3dc12e5-f338-44a7-932b-f869feeb520e" height="300"/>
+<br>
+<img src="https://github.com/user-attachments/assets/a79c61d7-84d6-4318-b07c-c1eaf0914402" height="300"/>
