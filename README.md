@@ -87,3 +87,6 @@ HTTPS 적용 과정에서 로컬 개발 환경 기준으로 Spring Boot `yml(ser
 <img src="https://github.com/user-attachments/assets/a79c61d7-84d6-4318-b07c-c1eaf0914402" height="300"/>
 
 > 식당 관리자 페이지
+
+## 📎 Links
+- Notion: https://spectacular-polyester-0b5.notion.site/atta-parune-1ec6d625693f802cb1ace897caf0e629
