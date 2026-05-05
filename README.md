@@ -27,6 +27,10 @@ HTTPS 기반 도메인 환경에서 배포까지 진행했습니다.
 - 회사 관리자: 포인트 충전 및 사원 관리
 - 시스템 관리자: 식당 및 회사 등록
 
+## 🏗 서비스 흐름
+
+사용자 → 식당 조회 → 예약 → 결제 → 주문 내역 확인
+
 ## 🙋‍♂️ 담당 역할
 
 ### 📊 데이터 조회 및 사용자 기능
@@ -46,13 +50,29 @@ HTTPS 기반 도메인 환경에서 배포까지 진행했습니다.
 - Let's Encrypt를 활용하여 SSL 인증서를 발급하고 HTTPS 환경 구축
 - 사용자와 서버 간 통신을 암호화하여 보안성 강화
 
+### 🔍 기술적 구현 포인트
+- Spring Security를 활용한 역할 기반 인증/인가 처리
+- JPA와 MyBatis를 상황에 맞게 사용하여 데이터 접근 최적화
+- 예외 처리 구조를 설계하여 API 응답 일관성 유지
+
+## 🚨 트러블 슈팅
+
+HTTPS 적용 과정에서 로컬 개발 환경 기준으로 Spring Boot `yml(server.port)`를 `8080`으로 설정한 상태로 배포를 진행하였다.
+이후 `https://도메인:8080` 또는 `https://도메인:8443`으로 접속을 시도했으나 접속이 되지 않는 문제가 발생했다.
+원인은 배포 서버에서는 팀별로 외부 접근 포트가 각각 다르게 설정되어 있었고, 해당 프로젝트는 실제로 `5232` 포트를 통해서만 외부 접근이 가능한 구조였기 때문이다.
+외부 접근 포트(5232) → Spring Boot 내부 포트(8080)
+이로 인해 HTTPS 요청이 애플리케이션까지 정상적으로 전달되지 않았다.
+해결 방법으로 `yml 설정(server.port)`를 서버 환경에 맞게 `5232`로 변경하였다.
+
 ## 🖼 실행 화면
 
 ### 메인 화면
-<img src="https://github.com/user-attachments/assets/5f8406f9-8c1c-4010-b578-b5b0ffe964c3" width="200"/>
+<img src="https://github.com/user-attachments/assets/192ee4d0-5c41-49e4-971d-f0f6faa5dc8e" width="200"/>
+
+> 식당 리스트를 별점순/리뷰순으로 조회할 수 있는 메인 화면
 
 ### 주문 내역
-<img src="https://github.com/user-attachments/assets/c78c6f53-f101-4a16-8bf3-5e5661e32e87" width="200"/>
+<img src="https://github.com/user-attachments/assets/2fbf7d4b-c5a7-49d2-9dea-8d755e134076" width="200"/>
 <img src="https://github.com/user-attachments/assets/4384a4f2-5ae7-4628-b86c-b9f71883a06e" width="200"/>
 
 ### 함께 결제
@@ -61,5 +81,9 @@ HTTPS 기반 도메인 환경에서 배포까지 진행했습니다.
 
 ### 관리자 페이지
 <img src="https://github.com/user-attachments/assets/a3dc12e5-f338-44a7-932b-f869feeb520e" height="300"/>
+
+> 회사 관리자 페이지
 <br>
 <img src="https://github.com/user-attachments/assets/a79c61d7-84d6-4318-b07c-c1eaf0914402" height="300"/>
+
+> 식당 관리자 페이지
