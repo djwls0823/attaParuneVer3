@@ -23,6 +23,7 @@ HTTPS 기반 도메인 환경에서 배포까지 진행했습니다.
 - Spring Boot
 - Spring Security
 - MyBatis(2차) / JPA(3차)
+- Swagger
 
 ### Database
 - MariaDB
